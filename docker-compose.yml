@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:13
+    container_name: ubk_db
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=ubk
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+  redis:
+    image: redis:6.2-alpine
+    container_name: ubk_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+  app:
+    build: .
+    container_name: ubk_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - redis
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/ubk
+      - SPRING_DATA_REDIS_HOST=redis
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
