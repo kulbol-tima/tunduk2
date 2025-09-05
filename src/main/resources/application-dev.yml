@@ -1,0 +1,15 @@
+# Development-specific properties
+server:
+  port: 8080
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update # More lenient for development
+    show-sql: true
+  flyway:
+    enabled: true
+
+logging:
+  level:
+    kg.gov.mtsdr.ubk: DEBUG # More verbose logging for dev

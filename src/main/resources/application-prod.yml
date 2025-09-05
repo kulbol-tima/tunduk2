@@ -1,0 +1,47 @@
+# Production-specific properties
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:ubk}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate # Validate schema against Flyway migrations
+    show-sql: false
+  flyway:
+    enabled: true
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+# App-specific properties
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+  scheduler:
+    monthly-verification:
+      enabled: ${SCHEDULER_VERIFICATION_ENABLED:true}
+    recalculation:
+      enabled: ${SCHEDULER_RECALCULATION_ENABLED:true}
+    payment:
+      enabled: ${SCHEDULER_PAYMENT_ENABLED:true}
+    data-sync:
+      enabled: ${SCHEDULER_DATASYNC_ENABLED:true}
+
+# Monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,prometheus"
+  endpoint:
+    health:
+      show-details: when_authorized
+
+logging:
+  level:
+    kg.gov.mtsdr.ubk: INFO # Less verbose logging for prod

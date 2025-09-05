@@ -32,9 +32,9 @@ This is a Spring Boot application for the social benefits system "Үй-бүлө�
 - Java 17
 - Docker and Docker Compose
 
-### Running the Application
+### Running the Application (Development)
 
-The easiest way to run the entire application stack is by using Docker Compose.
+The easiest way to run the application for development is by using the default Docker Compose setup, which uses the `dev` Spring profile.
 
 1.  **Build the application JAR:**
     ```sh
@@ -46,6 +46,23 @@ The easiest way to run the entire application stack is by using Docker Compose.
     docker-compose up --build
     ```
     The application will be available at `http://localhost:8080`.
+
+### Production Deployment
+
+To deploy the application in a production-like environment, use the provided deployment script.
+
+1.  **Navigate to the scripts directory:**
+    ```sh
+    cd scripts
+    ```
+
+2.  **Run the deployment script:**
+    ```sh
+    ./deploy.sh
+    ```
+    The first time you run this, it will create a `.env` file in the project root. You **must** fill this file with your production secrets (database password, JWT secret, etc.) before running the script again.
+
+    The script will build a production-optimized Docker image and start the services using `docker-compose.prod.yml`.
 
 3.  **Accessing the API Documentation:**
     Once the application is running, the interactive Swagger UI can be accessed at:
