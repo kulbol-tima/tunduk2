@@ -1,0 +1,109 @@
+tunduk:
+  xroad-instance: "central-server"
+  security-server:
+    url: "http://localhost:8090/r1" # Placeholder URL
+  client:
+    member-class: "GOV"
+    member-code: "12345678"
+    subsystem-code: "UBK"
+
+  services:
+    # Example Service 1: Get Person Info
+    get-person-info:
+      service-code: "getPersonInfo"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "87654321"
+      subsystem-code: "PERSON_REG"
+    # Example Service 2: Get Address Info
+    get-address-info:
+      service-code: "getAddressInfo"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "87654321"
+      subsystem-code: "ADDRESS_REG"
+    # ... 14 more placeholder services
+    service-3:
+      service-code: "placeholder-3"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000003"
+      subsystem-code: "SUB-3"
+    service-4:
+      service-code: "placeholder-4"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000004"
+      subsystem-code: "SUB-4"
+    service-5:
+      service-code: "placeholder-5"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000005"
+      subsystem-code: "SUB-5"
+    service-6:
+      service-code: "placeholder-6"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000006"
+      subsystem-code: "SUB-6"
+    service-7:
+      service-code: "placeholder-7"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000007"
+      subsystem-code: "SUB-7"
+    service-8:
+      service-code: "placeholder-8"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000008"
+      subsystem-code: "SUB-8"
+    service-9:
+      service-code: "placeholder-9"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000009"
+      subsystem-code: "SUB-9"
+    service-10:
+      service-code: "placeholder-10"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000010"
+      subsystem-code: "SUB-10"
+    service-11:
+      service-code: "placeholder-11"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000011"
+      subsystem-code: "SUB-11"
+    service-12:
+      service-code: "placeholder-12"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000012"
+      subsystem-code: "SUB-12"
+    service-13:
+      service-code: "placeholder-13"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000013"
+      subsystem-code: "SUB-13"
+    service-14:
+      service-code: "placeholder-14"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000014"
+      subsystem-code: "SUB-14"
+    service-15:
+      service-code: "placeholder-15"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000015"
+      subsystem-code: "SUB-15"
+    service-16:
+      service-code: "placeholder-16"
+      service-version: "v1"
+      member-class: "GOV"
+      member-code: "00000016"
+      subsystem-code: "SUB-16"
