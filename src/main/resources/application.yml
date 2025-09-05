@@ -20,3 +20,17 @@ spring:
     redis:
       host: localhost
       port: 6379
+
+app:
+  jwt:
+    secret: defaultSecretKeyThatIsVeryLongAndSecureEnoughForHS256
+    expiration-ms: 86400000
+  scheduler:
+    monthly-verification:
+      enabled: true
+    recalculation:
+      enabled: true
+    payment:
+      enabled: true
+    data-sync:
+      enabled: true
