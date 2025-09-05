@@ -1,0 +1,11 @@
+spring:
+  flyway:
+    enabled: false # Disable Flyway for most tests, schema will be managed by Hibernate or manually
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # Create schema on startup and drop on shutdown for tests
+
+logging:
+  level:
+    org.springframework.test.context.transaction: INFO
+    org.testcontainers: INFO
